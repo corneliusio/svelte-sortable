@@ -1,0 +1,19 @@
+{
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Edge versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions"
+  ],
+  "scripts": {
+    "dev": "webpack --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "devDependencies": {
+    "brightpack": "https://bitbucket.org/corneliusio/brightpack",
+    "eslint": "^5.16.0",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-svelte3": "^1.0.0",
+    "eslint-plugin-vue": "^5.2.2"
+  }
+}
