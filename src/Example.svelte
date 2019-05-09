@@ -1,7 +1,7 @@
 <input type="text" bind:value on:keydown={onKeydown}>
 
 <Sortable bind:items let:item>
-    <pre>{JSON.stringify(item, null, 2)}</pre>
+    <pre>{JSON.stringify(item.title, null, 2)}</pre>
 </Sortable>
 
 <script>
@@ -10,10 +10,30 @@
     let value = '';
 
     let items = [
-        { title: 'Velit nostrud ut.' },
-        { title: 'Minim fugiat ut aliqua.' },
-        { title: 'Est exercitation minim.' },
-        { title: 'Lorem ipsum sit consectetur.' }
+        { title: 'Lorem ipsum id' },
+        { title: 'Lorem ipsum eiusmod pariatur' },
+        { title: 'Lorem ipsum reprehenderit dolore' },
+        { title: 'Duis' },
+        { title: 'Ex dolore ullamco consequat' },
+        { title: 'Lorem ipsum minim in amet dolore' },
+        { title: 'Non tempor' },
+        { title: 'Incididunt' },
+        { title: 'Labore excepteur do excepteur' },
+        { title: 'Officia sint' },
+        { title: 'Amet aute commodo' },
+        { title: 'Eiusmod aute dolor' },
+        { title: 'Lorem ipsum id' },
+        { title: 'Lorem ipsum eiusmod pariatur' },
+        { title: 'Lorem ipsum reprehenderit dolore' },
+        { title: 'Duis' },
+        { title: 'Ex dolore ullamco consequat' },
+        { title: 'Lorem ipsum minim in amet dolore' },
+        { title: 'Non tempor' },
+        { title: 'Incididunt' },
+        { title: 'Labore excepteur do excepteur' },
+        { title: 'Officia sint' },
+        { title: 'Amet aute commodo' },
+        { title: 'Eiusmod aute dolor' }
     ];
 
     function onKeydown(event) {
