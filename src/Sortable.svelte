@@ -2,28 +2,26 @@
     bind:innerWidth={sw}
     bind:innerHeight={sh}
     on:mouseup={stopDragging}
-    on:mousemove={throttle(updateGlobalMousePosition, 8)}
+    on:mousemove={updateGlobalMousePosition}
 />
 
 <div class="sortable" style="user-select: none;">
-    {#each items as item, i}
+    {#each items as item, index}
         {#if item.__isDragging}
             <div class="sortable-item sortable-dragging" bind:this={el}>
-                <slot {item} {i} />
+                <slot {item} {index} />
             </div>
         {:else}
             <div class="sortable-item"
-                on:mousedown={event => startDragging(event, i)}
-                on:mousemove={throttle(event => el && updateDraggingIndex(event, i), 8)}>
-                <slot {item} {i} />
+                on:mousedown={event => startDragging(event, index)}
+                on:mousemove={event => el && updateDraggingIndex(event, index)}>
+                <slot {item} {index} />
             </div>
         {/if}
     {/each}
 </div>
 
 <script>
-    import throttle from './modules/throttle';
-
     export let items = [];
 
     let movePrev = false,

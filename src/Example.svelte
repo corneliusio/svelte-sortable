@@ -7,34 +7,23 @@
 <script>
     import Sortable from './Sortable.svelte';
 
-    let value = '';
-
-    let items = [
-        { title: 'Lorem ipsum id' },
-        { title: 'Lorem ipsum eiusmod pariatur' },
-        { title: 'Lorem ipsum reprehenderit dolore' },
-        { title: 'Duis' },
-        { title: 'Ex dolore ullamco consequat' },
-        { title: 'Lorem ipsum minim in amet dolore' },
-        { title: 'Non tempor' },
-        { title: 'Incididunt' },
-        { title: 'Labore excepteur do excepteur' },
-        { title: 'Officia sint' },
-        { title: 'Amet aute commodo' },
-        { title: 'Eiusmod aute dolor' },
-        { title: 'Lorem ipsum id' },
-        { title: 'Lorem ipsum eiusmod pariatur' },
-        { title: 'Lorem ipsum reprehenderit dolore' },
-        { title: 'Duis' },
-        { title: 'Ex dolore ullamco consequat' },
-        { title: 'Lorem ipsum minim in amet dolore' },
-        { title: 'Non tempor' },
-        { title: 'Incididunt' },
-        { title: 'Labore excepteur do excepteur' },
-        { title: 'Officia sint' },
-        { title: 'Amet aute commodo' },
-        { title: 'Eiusmod aute dolor' }
-    ];
+    let value = '',
+        items = [
+            { title: 'Lorem ipsum id' },
+            { title: 'Lorem ipsum eiusmod pariatur' },
+            { title: 'Lorem ipsum reprehenderit dolore' },
+            { title: 'Duis' },
+            { title: 'Ex dolore ullamco consequat' },
+            { title: 'Lorem ipsum minim in amet dolore' },
+            { title: 'Non tempor' },
+            { title: 'Incididunt' },
+            { title: 'Labore excepteur do excepteur' },
+            { title: 'Officia sint' },
+            { title: 'Amet aute commodo' },
+            { title: 'Eiusmod aute dolor' },
+            { title: 'Lorem ipsum id' },
+            { title: 'Lorem ipsum eiusmod pariatur' }
+        ];
 
     function onKeydown(event) {
         switch (event.key) {
