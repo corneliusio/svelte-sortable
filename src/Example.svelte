@@ -32,7 +32,7 @@
                 break;
             case 'Enter' :
                 items.unshift({ title: value });
-                items = [...items];
+                items = [ ...items ];
                 value = '';
                 break;
         }
@@ -46,33 +46,38 @@
 
     :global(body) {
         display: flex;
-        padding: 5%;
         justify-content: center;
+        padding: 5%;
         color: #FFF;
     }
 
-    :global(.sortable-dragging) {
+    :global(.sortable-item) {
+        transition: transform 512ms;
+    }
+
+    :global(.sortable-item.sortable-dragging) {
         background-color: color(#FFF alpha(0.25));
-        box-shadow: 0 0 0 1px #FFF;
         opacity: 0.75;
+        box-shadow: 0 0 0 1px #FFF;
+        transform: scale(1.1);
     }
 
     input {
         display: block;
-        line-height: 1.5;
+        width: 100%;
         padding: 0.5rem 0.75rem;
+        margin-bottom: 2rem;
+        border: 0;
         font-size: inherit;
-        background-color: color(#FFF alpha(0.25));
         color: #FFF;
+        line-height: 1.5;
+        background-color: color(#FFF alpha(0.25));
         border-radius: 0.2rem;
         outline: none;
-        border: 0;
-        width: 100%;
-        margin-bottom: 2rem;
     }
 
     pre {
-        margin: 0;
         padding: 0.5rem;
+        margin: 0;
     }
 </style>

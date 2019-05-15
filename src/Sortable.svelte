@@ -5,7 +5,7 @@
     on:mousemove={updateGlobalMousePosition}
 />
 
-<div class="sortable" style="user-select: none;">
+<div class="sortable" style={dragging ? 'user-select: none; cursor: grabbing;' : 'cursor: grab;'}>
     {#each items as item, index}
         {#if item.__isDragging}
             <div class="sortable-item sortable-dragging" bind:this={el}>
@@ -54,11 +54,15 @@
                 }
             }
 
-            items = [...items];
+            items = [ ...items ];
         }
     }
 
     function startDragging(event, i) {
+        (selection => {
+            selection.empty && selection.empty();
+            selection.removeAllRanges && selection.removeAllRanges();
+        })(window.getSelection ? window.getSelection() : document.selection);
         dragging = items.splice(index = i, 1).pop();
     }
 
