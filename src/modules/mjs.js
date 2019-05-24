@@ -1,1 +1,1 @@
-export default request => request.then(m => m.default);
+export default request => request.then(m => m.default || m);
